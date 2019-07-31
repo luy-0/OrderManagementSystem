@@ -7,6 +7,6 @@ https://github.com/menglijinghua/community
 
 https://www.bilibili.com/video/av50200264
 
-## 你好!
+## 你好，朋友！
 
 
