@@ -19,7 +19,7 @@ public class MyController {
 
     @RequestMapping("/file")
     public String file() {
-        return "/file";
+        return  "/file";
     }
 
     @ResponseBody
