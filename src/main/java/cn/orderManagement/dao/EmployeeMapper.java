@@ -2,10 +2,13 @@ package cn.orderManagement.dao;
 
 import cn.orderManagement.bean.Employee;
 import cn.orderManagement.bean.EmployeeExample;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 
+import java.util.List;
+
+@Mapper
 public interface EmployeeMapper {
     long countByExample(EmployeeExample example);
 

@@ -3,10 +3,13 @@ package cn.orderManagement.dao;
 import cn.orderManagement.bean.Complaint;
 import cn.orderManagement.bean.ComplaintExample;
 import cn.orderManagement.bean.ComplaintWithBLOBs;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 
+import java.util.List;
+
+@Mapper
 public interface ComplaintMapper {
     long countByExample(ComplaintExample example);
 

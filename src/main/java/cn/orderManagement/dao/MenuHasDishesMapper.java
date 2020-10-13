@@ -2,10 +2,13 @@ package cn.orderManagement.dao;
 
 import cn.orderManagement.bean.MenuHasDishes;
 import cn.orderManagement.bean.MenuHasDishesExample;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 
+import java.util.List;
+
+@Mapper
 public interface MenuHasDishesMapper {
     long countByExample(MenuHasDishesExample example);
 

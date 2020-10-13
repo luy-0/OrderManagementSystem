@@ -2,10 +2,13 @@ package cn.orderManagement.dao;
 
 import cn.orderManagement.bean.Dish;
 import cn.orderManagement.bean.DishExample;
-import java.util.List;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.session.RowBounds;
 
+import java.util.List;
+
+@Mapper
 public interface DishMapper {
     long countByExample(DishExample example);
 
