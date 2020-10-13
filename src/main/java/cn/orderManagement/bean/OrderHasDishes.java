@@ -1,6 +1,6 @@
 package cn.orderManagement.bean;
 
-public class orderHasDishes {
+public class OrderHasDishes {
     private Integer orderId;
 
     private Integer dishId;

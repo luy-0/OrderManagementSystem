@@ -3,14 +3,14 @@ package cn.orderManagement.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MerchantExample {
+public class DeliveryClerkExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public MerchantExample() {
+    public DeliveryClerkExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 
@@ -104,63 +104,63 @@ public class MerchantExample {
             criteria.add(new Criterion(condition, value1, value2));
         }
 
-        public Criteria andMerchantIdIsNull() {
-            addCriterion("merchant_id is null");
+        public Criteria andClerkIdIsNull() {
+            addCriterion("clerk_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdIsNotNull() {
-            addCriterion("merchant_id is not null");
+        public Criteria andClerkIdIsNotNull() {
+            addCriterion("clerk_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdEqualTo(Integer value) {
-            addCriterion("merchant_id =", value, "merchantId");
+        public Criteria andClerkIdEqualTo(Integer value) {
+            addCriterion("clerk_id =", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdNotEqualTo(Integer value) {
-            addCriterion("merchant_id <>", value, "merchantId");
+        public Criteria andClerkIdNotEqualTo(Integer value) {
+            addCriterion("clerk_id <>", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdGreaterThan(Integer value) {
-            addCriterion("merchant_id >", value, "merchantId");
+        public Criteria andClerkIdGreaterThan(Integer value) {
+            addCriterion("clerk_id >", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdGreaterThanOrEqualTo(Integer value) {
-            addCriterion("merchant_id >=", value, "merchantId");
+        public Criteria andClerkIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("clerk_id >=", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdLessThan(Integer value) {
-            addCriterion("merchant_id <", value, "merchantId");
+        public Criteria andClerkIdLessThan(Integer value) {
+            addCriterion("clerk_id <", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdLessThanOrEqualTo(Integer value) {
-            addCriterion("merchant_id <=", value, "merchantId");
+        public Criteria andClerkIdLessThanOrEqualTo(Integer value) {
+            addCriterion("clerk_id <=", value, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdIn(List<Integer> values) {
-            addCriterion("merchant_id in", values, "merchantId");
+        public Criteria andClerkIdIn(List<Integer> values) {
+            addCriterion("clerk_id in", values, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdNotIn(List<Integer> values) {
-            addCriterion("merchant_id not in", values, "merchantId");
+        public Criteria andClerkIdNotIn(List<Integer> values) {
+            addCriterion("clerk_id not in", values, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdBetween(Integer value1, Integer value2) {
-            addCriterion("merchant_id between", value1, value2, "merchantId");
+        public Criteria andClerkIdBetween(Integer value1, Integer value2) {
+            addCriterion("clerk_id between", value1, value2, "clerkId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantIdNotBetween(Integer value1, Integer value2) {
-            addCriterion("merchant_id not between", value1, value2, "merchantId");
+        public Criteria andClerkIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("clerk_id not between", value1, value2, "clerkId");
             return (Criteria) this;
         }
 
@@ -234,213 +234,203 @@ public class MerchantExample {
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameIsNull() {
-            addCriterion("merchant_name is null");
+        public Criteria andClearkNameIsNull() {
+            addCriterion("cleark_name is null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameIsNotNull() {
-            addCriterion("merchant_name is not null");
+        public Criteria andClearkNameIsNotNull() {
+            addCriterion("cleark_name is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameEqualTo(String value) {
-            addCriterion("merchant_name =", value, "merchantName");
+        public Criteria andClearkNameEqualTo(String value) {
+            addCriterion("cleark_name =", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameNotEqualTo(String value) {
-            addCriterion("merchant_name <>", value, "merchantName");
+        public Criteria andClearkNameNotEqualTo(String value) {
+            addCriterion("cleark_name <>", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameGreaterThan(String value) {
-            addCriterion("merchant_name >", value, "merchantName");
+        public Criteria andClearkNameGreaterThan(String value) {
+            addCriterion("cleark_name >", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameGreaterThanOrEqualTo(String value) {
-            addCriterion("merchant_name >=", value, "merchantName");
+        public Criteria andClearkNameGreaterThanOrEqualTo(String value) {
+            addCriterion("cleark_name >=", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameLessThan(String value) {
-            addCriterion("merchant_name <", value, "merchantName");
+        public Criteria andClearkNameLessThan(String value) {
+            addCriterion("cleark_name <", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameLessThanOrEqualTo(String value) {
-            addCriterion("merchant_name <=", value, "merchantName");
+        public Criteria andClearkNameLessThanOrEqualTo(String value) {
+            addCriterion("cleark_name <=", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameLike(String value) {
-            addCriterion("merchant_name like", value, "merchantName");
+        public Criteria andClearkNameLike(String value) {
+            addCriterion("cleark_name like", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameNotLike(String value) {
-            addCriterion("merchant_name not like", value, "merchantName");
+        public Criteria andClearkNameNotLike(String value) {
+            addCriterion("cleark_name not like", value, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameIn(List<String> values) {
-            addCriterion("merchant_name in", values, "merchantName");
+        public Criteria andClearkNameIn(List<String> values) {
+            addCriterion("cleark_name in", values, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameNotIn(List<String> values) {
-            addCriterion("merchant_name not in", values, "merchantName");
+        public Criteria andClearkNameNotIn(List<String> values) {
+            addCriterion("cleark_name not in", values, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameBetween(String value1, String value2) {
-            addCriterion("merchant_name between", value1, value2, "merchantName");
+        public Criteria andClearkNameBetween(String value1, String value2) {
+            addCriterion("cleark_name between", value1, value2, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantNameNotBetween(String value1, String value2) {
-            addCriterion("merchant_name not between", value1, value2, "merchantName");
+        public Criteria andClearkNameNotBetween(String value1, String value2) {
+            addCriterion("cleark_name not between", value1, value2, "clearkName");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordIsNull() {
-            addCriterion("merchant_password is null");
+        public Criteria andClearkPasswordIsNull() {
+            addCriterion("cleark_password is null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordIsNotNull() {
-            addCriterion("merchant_password is not null");
+        public Criteria andClearkPasswordIsNotNull() {
+            addCriterion("cleark_password is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordEqualTo(String value) {
-            addCriterion("merchant_password =", value, "merchantPassword");
+        public Criteria andClearkPasswordEqualTo(String value) {
+            addCriterion("cleark_password =", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordNotEqualTo(String value) {
-            addCriterion("merchant_password <>", value, "merchantPassword");
+        public Criteria andClearkPasswordNotEqualTo(String value) {
+            addCriterion("cleark_password <>", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordGreaterThan(String value) {
-            addCriterion("merchant_password >", value, "merchantPassword");
+        public Criteria andClearkPasswordGreaterThan(String value) {
+            addCriterion("cleark_password >", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordGreaterThanOrEqualTo(String value) {
-            addCriterion("merchant_password >=", value, "merchantPassword");
+        public Criteria andClearkPasswordGreaterThanOrEqualTo(String value) {
+            addCriterion("cleark_password >=", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordLessThan(String value) {
-            addCriterion("merchant_password <", value, "merchantPassword");
+        public Criteria andClearkPasswordLessThan(String value) {
+            addCriterion("cleark_password <", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordLessThanOrEqualTo(String value) {
-            addCriterion("merchant_password <=", value, "merchantPassword");
+        public Criteria andClearkPasswordLessThanOrEqualTo(String value) {
+            addCriterion("cleark_password <=", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordLike(String value) {
-            addCriterion("merchant_password like", value, "merchantPassword");
+        public Criteria andClearkPasswordLike(String value) {
+            addCriterion("cleark_password like", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordNotLike(String value) {
-            addCriterion("merchant_password not like", value, "merchantPassword");
+        public Criteria andClearkPasswordNotLike(String value) {
+            addCriterion("cleark_password not like", value, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordIn(List<String> values) {
-            addCriterion("merchant_password in", values, "merchantPassword");
+        public Criteria andClearkPasswordIn(List<String> values) {
+            addCriterion("cleark_password in", values, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordNotIn(List<String> values) {
-            addCriterion("merchant_password not in", values, "merchantPassword");
+        public Criteria andClearkPasswordNotIn(List<String> values) {
+            addCriterion("cleark_password not in", values, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordBetween(String value1, String value2) {
-            addCriterion("merchant_password between", value1, value2, "merchantPassword");
+        public Criteria andClearkPasswordBetween(String value1, String value2) {
+            addCriterion("cleark_password between", value1, value2, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantPasswordNotBetween(String value1, String value2) {
-            addCriterion("merchant_password not between", value1, value2, "merchantPassword");
+        public Criteria andClearkPasswordNotBetween(String value1, String value2) {
+            addCriterion("cleark_password not between", value1, value2, "clearkPassword");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressIsNull() {
-            addCriterion("merchant_address is null");
+        public Criteria andOrderIdIsNull() {
+            addCriterion("order_id is null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressIsNotNull() {
-            addCriterion("merchant_address is not null");
+        public Criteria andOrderIdIsNotNull() {
+            addCriterion("order_id is not null");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressEqualTo(String value) {
-            addCriterion("merchant_address =", value, "merchantAddress");
+        public Criteria andOrderIdEqualTo(Integer value) {
+            addCriterion("order_id =", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressNotEqualTo(String value) {
-            addCriterion("merchant_address <>", value, "merchantAddress");
+        public Criteria andOrderIdNotEqualTo(Integer value) {
+            addCriterion("order_id <>", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressGreaterThan(String value) {
-            addCriterion("merchant_address >", value, "merchantAddress");
+        public Criteria andOrderIdGreaterThan(Integer value) {
+            addCriterion("order_id >", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressGreaterThanOrEqualTo(String value) {
-            addCriterion("merchant_address >=", value, "merchantAddress");
+        public Criteria andOrderIdGreaterThanOrEqualTo(Integer value) {
+            addCriterion("order_id >=", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressLessThan(String value) {
-            addCriterion("merchant_address <", value, "merchantAddress");
+        public Criteria andOrderIdLessThan(Integer value) {
+            addCriterion("order_id <", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressLessThanOrEqualTo(String value) {
-            addCriterion("merchant_address <=", value, "merchantAddress");
+        public Criteria andOrderIdLessThanOrEqualTo(Integer value) {
+            addCriterion("order_id <=", value, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressLike(String value) {
-            addCriterion("merchant_address like", value, "merchantAddress");
+        public Criteria andOrderIdIn(List<Integer> values) {
+            addCriterion("order_id in", values, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressNotLike(String value) {
-            addCriterion("merchant_address not like", value, "merchantAddress");
+        public Criteria andOrderIdNotIn(List<Integer> values) {
+            addCriterion("order_id not in", values, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressIn(List<String> values) {
-            addCriterion("merchant_address in", values, "merchantAddress");
+        public Criteria andOrderIdBetween(Integer value1, Integer value2) {
+            addCriterion("order_id between", value1, value2, "orderId");
             return (Criteria) this;
         }
 
-        public Criteria andMerchantAddressNotIn(List<String> values) {
-            addCriterion("merchant_address not in", values, "merchantAddress");
-            return (Criteria) this;
-        }
-
-        public Criteria andMerchantAddressBetween(String value1, String value2) {
-            addCriterion("merchant_address between", value1, value2, "merchantAddress");
-            return (Criteria) this;
-        }
-
-        public Criteria andMerchantAddressNotBetween(String value1, String value2) {
-            addCriterion("merchant_address not between", value1, value2, "merchantAddress");
+        public Criteria andOrderIdNotBetween(Integer value1, Integer value2) {
+            addCriterion("order_id not between", value1, value2, "orderId");
             return (Criteria) this;
         }
     }

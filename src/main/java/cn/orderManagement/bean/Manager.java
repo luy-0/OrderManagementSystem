@@ -3,6 +3,8 @@ package cn.orderManagement.bean;
 public class Manager {
     private Integer managerId;
 
+    private String workNumber;
+
     private String managerName;
 
     private String managerPassword;
@@ -15,6 +17,14 @@ public class Manager {
 
     public void setManagerId(Integer managerId) {
         this.managerId = managerId;
+    }
+
+    public String getWorkNumber() {
+        return workNumber;
+    }
+
+    public void setWorkNumber(String workNumber) {
+        this.workNumber = workNumber == null ? null : workNumber.trim();
     }
 
     public String getManagerName() {

@@ -164,6 +164,76 @@ public class EmployeeExample {
             return (Criteria) this;
         }
 
+        public Criteria andWorkNumberIsNull() {
+            addCriterion("work_number is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberIsNotNull() {
+            addCriterion("work_number is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberEqualTo(String value) {
+            addCriterion("work_number =", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberNotEqualTo(String value) {
+            addCriterion("work_number <>", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberGreaterThan(String value) {
+            addCriterion("work_number >", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberGreaterThanOrEqualTo(String value) {
+            addCriterion("work_number >=", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberLessThan(String value) {
+            addCriterion("work_number <", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberLessThanOrEqualTo(String value) {
+            addCriterion("work_number <=", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberLike(String value) {
+            addCriterion("work_number like", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberNotLike(String value) {
+            addCriterion("work_number not like", value, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberIn(List<String> values) {
+            addCriterion("work_number in", values, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberNotIn(List<String> values) {
+            addCriterion("work_number not in", values, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberBetween(String value1, String value2) {
+            addCriterion("work_number between", value1, value2, "workNumber");
+            return (Criteria) this;
+        }
+
+        public Criteria andWorkNumberNotBetween(String value1, String value2) {
+            addCriterion("work_number not between", value1, value2, "workNumber");
+            return (Criteria) this;
+        }
+
         public Criteria andEmployeeNameIsNull() {
             addCriterion("employee_name is null");
             return (Criteria) this;

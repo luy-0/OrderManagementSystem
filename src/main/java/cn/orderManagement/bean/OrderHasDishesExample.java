@@ -3,14 +3,14 @@ package cn.orderManagement.bean;
 import java.util.ArrayList;
 import java.util.List;
 
-public class orderHasDishesExample {
+public class OrderHasDishesExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public orderHasDishesExample() {
+    public OrderHasDishesExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

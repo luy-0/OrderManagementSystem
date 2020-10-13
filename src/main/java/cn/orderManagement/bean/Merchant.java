@@ -3,6 +3,8 @@ package cn.orderManagement.bean;
 public class Merchant {
     private Integer merchantId;
 
+    private String workNumber;
+
     private String merchantName;
 
     private String merchantPassword;
@@ -15,6 +17,14 @@ public class Merchant {
 
     public void setMerchantId(Integer merchantId) {
         this.merchantId = merchantId;
+    }
+
+    public String getWorkNumber() {
+        return workNumber;
+    }
+
+    public void setWorkNumber(String workNumber) {
+        this.workNumber = workNumber == null ? null : workNumber.trim();
     }
 
     public String getMerchantName() {

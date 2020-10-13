@@ -1,11 +1,8 @@
 package cn.orderManagement.bean;
 
-import lombok.Data;
-
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
 public class BillExample {
     protected String orderByClause;
 
