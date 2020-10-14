@@ -3,11 +3,13 @@ package cn.orderManagement.controller;
 import cn.orderManagement.bean.DeliveryClerk;
 import cn.orderManagement.bean.Employee;
 import cn.orderManagement.bean.Manager;
+import cn.orderManagement.bean.Merchant;
 import cn.orderManagement.service.interfaces.ClerkService;
 import cn.orderManagement.service.interfaces.EmployeeService;
 import cn.orderManagement.service.interfaces.ManagerService;
+import cn.orderManagement.service.interfaces.MerchantService;
+import cn.orderManagement.vo.LoginVO;
 import cn.orderManagement.vo.RegisterVO;
-import com.alibaba.fastjson.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,10 +31,24 @@ public class RegisterAndLoginController {
     @Autowired
     ClerkService clerkService;
 
+    @Autowired
+    MerchantService merchantService;
+
+    @RequestMapping("/login")
+    public String login(){
+        return "Sign in.html";
+    }
+
     @RequestMapping("/register")
+    public String register(){
+        return "Sign up.html";
+    }
+
+    @RequestMapping(value = "/handleRegister",produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public Map<String, Object> register(@RequestBody RegisterVO registerVO) {
+    public Map<String, Object> handleRegister(@RequestBody RegisterVO registerVO) {
         Map<String, Object> resultMap = new HashMap<>();
+        System.out.println(registerVO.toString());
         String resultMsg = null;
         if (registerVO.getPersonnel().equals("员工")) {
             Employee employee = new Employee();
@@ -56,45 +72,52 @@ public class RegisterAndLoginController {
             deliveryClerk.setClearkPassword(registerVO.getPassword());
             deliveryClerk.setWorkNumber(registerVO.getWorkNumber());
             resultMsg = clerkService.registerClerk(deliveryClerk);
+        }else if(registerVO.getPersonnel().equals("商家")){
+            Merchant merchant = new Merchant();
+            merchant.setMerchantName(registerVO.getUserName());
+            merchant.setMerchantPassword(registerVO.getPassword());
+            merchant.setWorkNumber(registerVO.getWorkNumber());
+            merchant.setMerchantAddress(registerVO.getAddress());
+            resultMsg = merchantService.registerMerchant(merchant);
         }
         resultMap.put("msg",resultMsg);
         return resultMap;
     }
 
 
-    @RequestMapping("/login")
-    public String login(){
-        return "Sign in.html";
-    }
-
     @RequestMapping(value="/checkLogin", produces = "application/json;charset=UTF-8")
     @ResponseBody
-    public Map<String,Object> checkLogin(@RequestBody JSONObject jsonObject){
+    public Map<String,Object> checkLogin(@RequestBody LoginVO loginVO){
         Map<String, Object> resultMap = new HashMap<>();
         String resultMsg = null;
-        System.out.println("hello");
-        System.out.println(jsonObject.toJSONString());
-//        if(loginVO.getPersonnel().equals("员工")){
-//            if(employeeService.loginEmployee(loginVO)){
-//                resultMsg="登录成功";
-//            }else{
-//                resultMsg="账号或密码错误";
-//            }
-//        }
-//        else if(loginVO.getPersonnel().equals("经理")){
-//             if(managerService.loginManager(loginVO)){
-//                resultMsg="登录成功";
-//            }else{
-//                resultMsg="账号或密码错误";
-//            }
-//        }
-//        else if(loginVO.getPersonnel().equals("送餐员")){
-//            if(clerkService.loginClerk(loginVO)){
-//                resultMsg="登录成功";
-//            }else{
-//                resultMsg="账号或密码错误";
-//            }
-//        }
+        System.out.println(loginVO.toString());
+        if(loginVO.getPersonnel().equals("员工")){
+            if(employeeService.loginEmployee(loginVO)){
+                resultMsg="登录成功";
+            }else{
+                resultMsg="账号或密码错误";
+            }
+        }
+        else if(loginVO.getPersonnel().equals("经理")){
+             if(managerService.loginManager(loginVO)){
+                resultMsg="登录成功";
+            }else{
+                resultMsg="账号或密码错误";
+            }
+        }
+        else if(loginVO.getPersonnel().equals("送餐员")){
+            if(clerkService.loginClerk(loginVO)){
+                resultMsg="登录成功";
+            }else{
+                resultMsg="账号或密码错误";
+            }
+        }else if(loginVO.getPersonnel().equals("商家")){
+            if(merchantService.loginMerchant(loginVO)){
+                resultMsg="登录成功";
+            }else{
+                resultMsg="账号或密码错误";
+            }
+        }
         resultMap.put("msg",resultMsg);
         return resultMap;
     }
